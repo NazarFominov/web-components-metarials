@@ -1,0 +1,12 @@
+button {
+    padding: 0.75rem 1.5rem;
+    background-color: darkcyan;
+    color: white;
+    border-radius: 0.25rem;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}

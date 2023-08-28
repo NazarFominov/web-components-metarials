@@ -1,0 +1,59 @@
+body {
+    margin: 1.5rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrap {
+    display: flex;
+    gap: 2rem;
+    justify-content: start;
+}
+
+input {
+    height: 2rem;
+    border-radius: 0.25rem;
+    outline: none;
+    border: 1px solid;
+    padding: 0.25rem 0.5rem;
+}
+
+p {
+    background-color: black;
+    color: white;
+    height: 2rem;
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+    display: flex;
+    align-items: center;
+    border-radius: 0.25rem;
+}
+
+
+with-label:not(:defined) {
+    display: none;
+}
+
+
+with-label:defined {
+    display: block;
+}
+
+with-label {
+    position: relative;
+}
+
+with-label label {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    pointer-events: none;
+
+    transition: transform 0.3s;
+}
+
+with-label.with-value label {
+    transform: matrix(1, 0, 0, 1, 0, -26);
+}

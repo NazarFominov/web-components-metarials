@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fireworks example</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <script src="../../elements/navigation.js"></script>
+</head>
+<body>
+
+<nav is="custom-navigation"></nav>
+
+<user-card>
+    <span slot="name">Назар</span>
+    <li slot="favorite">Котов</li>
+    <li slot="favorite">Игры</li>
+    <h1>asdsadadasd</h1>
+</user-card>
+
+
+<template id="template">
+    <style>
+        .card {
+            border: 1px solid gray;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            width: fit-content;
+            min-width: 200px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        p, ul {
+            margin: 0;
+        }
+    </style>
+
+    <div class="card">
+        <p>Имя:
+            <slot name="name"></slot>
+        </p>
+        <p>Год рождения:
+             <slot name="age">Не указан</slot>
+         </p>
+        <div>
+            <p>Любит:</p>
+            <ul>
+                <slot name="favorite"></slot>
+            </ul>
+        </div>
+        <div>
+            <p>Дополнительная информация</p>
+            <slot></slot>
+        </div>
+    </div>
+</template>
+
+<script src="./index.js"></script>
+</body>
+</html>

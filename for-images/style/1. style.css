@@ -1,0 +1,49 @@
+/* 1 */
+:host {
+    width: 10rem;
+}
+
+
+/* 2 */
+:host([size="sm"]) {
+    width: 2rem;
+}
+
+
+/* 3 */
+/* В документе */
+my-element {
+    background-color: green;
+}
+
+/* Внутри теневого дерева */
+:host {
+    background-color: red;
+}
+
+/* 4 */
+slot[name="name"] {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+/* 5 */
+::slotted(div) {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+}
+
+::slotted(div) p {
+    /* не может войти в светлый DOM */
+}
+
+/* 6 */
+/* Внутри теневого дерева */
+button {
+    background: var(--my-element-button-background, green);
+}
+
+/* В документе */
+my-element {
+    --my-element-button-background: red;
+}

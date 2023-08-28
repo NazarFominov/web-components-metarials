@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fireworks example</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <script src="../../elements/navigation.js"></script>
+</head>
+<body>
+
+<nav is="custom-navigation"></nav>
+
+<button>Кнопка</button>
+
+<my-element>
+    <button slot="button">Кнопка</button>
+</my-element>
+
+
+<script src="./index.js"></script>
+
+<script>
+    Array.from(document.getElementsByTagName('button')).forEach(button => {
+        button.onclick = () => alert('click')
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fireworks example</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <script src="../../elements/navigation.js"></script>
+    <script src="./fireworks.js"></script>
+</head>
+<body>
+<style>
+    input, button {
+        height: 1.5rem;
+    }
+</style>
+
+<nav is="custom-navigation"></nav>
+
+
+<form style="display: flex; flex-direction: column; gap: 1rem; max-width: 20rem;">
+    <input type="text" placeholder="Поле 1">
+    <input type="text" placeholder="Поле 2">
+    <input type="text" placeholder="Поле 3">
+    <input type="text" placeholder="Поле 4">
+    <input type="text" placeholder="Поле 5">
+
+    <button type="button" is="fireworks-button">Отправить</button>
+    <button type="button" is="fireworks-button" disabled>Отключённая кнопка</button>
+</form>
+
+<script src="./index.js"></script>
+</body>
+</html>
